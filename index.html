@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Furious FC - Local Football Club of Balaju, Thecho" />
+    <meta name="author" content="Furious FC" />
+    <title>Furious FC - Official Website</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --furious-gold: #FFD700;
+            --furious-dark-gold: #B8860B;
+            --furious-black: #000000;
+            --furious-dark-gray: #1a1a1a;
+            --furious-light-gray: #2a2a2a;
+        }
+
+        body {
+            background-color: var(--furious-black);
+            color: white;
+        }
+
+        .navbar {
+            background-color: var(--furious-black) !important;
+            border-bottom: 2px solid var(--furious-gold);
+        }
+
+        .navbar-brand {
+            color: var(--furious-gold) !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--furious-gold) !important;
+        }
+
+        .btn-primary {
+            background-color: var(--furious-gold);
+            border-color: var(--furious-gold);
+            color: var(--furious-black);
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--furious-dark-gold);
+            border-color: var(--furious-dark-gold);
+            color: var(--furious-black);
+        }
+
+        .btn-outline-light {
+            border-color: var(--furious-gold);
+            color: var(--furious-gold);
+        }
+
+        .btn-outline-light:hover {
+            background-color: var(--furious-gold);
+            border-color: var(--furious-gold);
+            color: var(--furious-black);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--furious-black) 0%, var(--furious-dark-gray) 100%);
+            border-bottom: 3px solid var(--furious-gold);
+        }
+
+        .card {
+            background-color: var(--furious-light-gray);
+            border: 1px solid var(--furious-gold);
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .badge {
+            background-color: var(--furious-gold) !important;
+            color: var(--furious-black) !important;
+        }
+
+        .feature {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 0.75rem;
+            display: inline-flex;
+            align-items-center;
+            justify-content-center;
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--furious-gold), var(--furious-dark-gold));
+            color: var(--furious-black);
+        }
+
+        .bg-light {
+            background-color: var(--furious-dark-gray) !important;
+        }
+
+        .text-muted {
+            color: #cccccc !important;
+        }
+
+        .stats-section {
+            background: linear-gradient(45deg, var(--furious-dark-gray), var(--furious-light-gray));
+            border-top: 2px solid var(--furious-gold);
+            border-bottom: 2px solid var(--furious-gold);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--furious-gold);
+        }
+
+        footer {
+            background-color: var(--furious-black) !important;
+            border-top: 2px solid var(--furious-gold);
+        }
+
+        .link-light {
+            color: var(--furious-gold) !important;
+        }
+
+        .link-light:hover {
+            color: white !important;
+        }
+
+        .club-info {
+            background: linear-gradient(135deg, var(--furious-dark-gray), var(--furious-light-gray));
+            border-radius: 15px;
+            border: 2px solid var(--furious-gold);
+        }
+
+        .gold-text {
+            color: var(--furious-gold);
+        }
+
+        .upcoming-match {
+            background: linear-gradient(135deg, var(--furious-gold), var(--furious-dark-gold));
+            color: var(--furious-black);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .modal-content {
+            background-color: var(--furious-light-gray);
+            border: 2px solid var(--furious-gold);
+        }
+
+        .modal-header {
+            border-bottom: 1px solid var(--furious-gold);
+        }
+
+        .modal-footer {
+            border-top: 1px solid var(--furious-gold);
+        }
+
+        .player-position {
+            background: linear-gradient(135deg, var(--furious-gold), var(--furious-dark-gold));
+            color: var(--furious-black);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .player-card {
+            transition: all 0.3s ease;
+        }
+
+        .player-card:hover {
+            transform: scale(1.05);
+        }
+
+        .formation-field {
+            background: linear-gradient(to bottom, #2d5016, #4a7c59);
+            border-radius: 15px;
+            min-height: 500px;
+            position: relative;
+            border: 3px solid var(--furious-gold);
+        }
+
+        .field-line {
+            border: 2px solid white;
+            position: absolute;
+        }
+
+        .player-dot {
+            width: 60px;
+            height: 60px;
+            background: var(--furious-gold);
+            border: 3px solid var(--furious-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content-center;
+            font-weight: bold;
+            color: var(--furious-black);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .player-dot:hover {
+            transform: scale(1.2);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .news-content {
+            line-height: 1.8;
+        }
+
+        .news-content h3 {
+            color: var(--furious-gold);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .news-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .news-date {
+            color: var(--furious-gold);
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            z-index: 1000;
+            display: none;
+        }
+
+        .section-hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0">
+        <!-- Back Button -->
+        <button id="backBtn" class="btn btn-primary back-btn">
+            <i class="bi bi-arrow-left"></i> Back
+        </button>
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <div class="container px-5">
+                <a class="navbar-brand d-flex align-items-center" href="javascript:void(0)" onclick="showHome()">
+                    <i class="bi bi-lightning-fill me-2"></i>
+                    Furious FC
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)" onclick="showHome()">Home</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)"
+                                onclick="showSection('news')">News & Updates</a></li>
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)"
+                                onclick="showSection('team')">Team & Players</a></li>
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)"
+                                onclick="showSection('fixtures')">Fixtures & Results</a></li>
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0)"
+                                onclick="showSection('gallery')">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Container -->
+        <div id="mainSections">
+            <!-- Hero Section-->
+            <section id="home" class="hero-section py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-7 col-xl-8">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-4 fw-bolder text-white mb-3">
+                                    Welcome to <span class="gold-text">Furious FC</span>
+                                </h1>
+                                <p class="lead fw-normal text-white-50 mb-4">
+                                    The pride of Balaju, Thecho. We are more than a football club - we are a family
+                                    united by passion, dedication, and the beautiful game. Founded in 2020, we've been
+                                    making waves in local football with our fierce determination and community spirit.
+                                </p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="javascript:void(0)"
+                                        onclick="showSection('team')">Meet Our Team</a>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="javascript:void(0)"
+                                        onclick="showSection('fixtures')">Next Match</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 d-none d-xl-block text-center">
+                            <div class="club-info p-4">
+                                <i class="bi bi-trophy-fill" style="font-size: 4rem; color: var(--furious-gold);"></i>
+                                <h3 class="gold-text mt-3">Est. 2020</h3>
+                                <p class="text-white-50">Balaju, Thecho</p>
+                                <div class="row text-center mt-4">
+                                    <div class="col-4">
+                                        <div class="stat-number">22</div>
+                                        <small class="text-white-50">Players</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="stat-number">18</div>
+                                        <small class="text-white-50">Matches</small>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="stat-number">12</div>
+                                        <small class="text-white-50">Wins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Match Section -->
+            <section class="py-5">
+                <div class="container px-5">
+                    <div class="upcoming-match p-5 text-center">
+                        <h2 class="fw-bold mb-3">
+                            <i class="bi bi-calendar-event me-2"></i>
+                            Next Match
+                        </h2>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <h3 class="fw-bold">Furious FC</h3>
+                                <p class="mb-0">Home Team</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="display-6 fw-bold">VS</div>
+                                <p class="mb-1">Saturday, August 10</p>
+                                <p class="mb-0">3:00 PM</p>
+                                <small>Balaju Ground</small>
+                            </div>
+                            <div class="col-md-4">
+                                <h3 class="fw-bold">Thunder United</h3>
+                                <p class="mb-0">Away Team</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News & Updates Section-->
+            <section id="news" class="py-5 bg-light">
+                <div class="container px-5">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bolder gold-text">
+                            <i class="bi bi-newspaper me-2"></i>
+                            Latest News & Updates
+                        </h2>
+                        <p class="lead fw-normal text-muted mb-0">Stay updated with the latest from Furious FC</p>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow" onclick="showNews(1)">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/600x350/FFD700/000000&text=Training+Session"
+                                    alt="Training" />
+                                <div class="card-body p-4">
+                                    <div class="badge rounded-pill mb-2">Training</div>
+                                    <h5 class="card-title mb-3">Intense Pre-Season Training Camp Concludes Successfully
+                                    </h5>
+                                    <p class="card-text mb-0">Our players completed a rigorous 10-day training camp in
+                                        Pokhara, focusing on fitness, tactics, and team bonding ahead of the new season.
+                                    </p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="small">
+                                            <div class="text-muted">July 28, 2025 • 3 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow" onclick="showNews(2)">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/600x350/000000/FFD700&text=New+Signing"
+                                    alt="New Player" />
+                                <div class="card-body p-4">
+                                    <div class="badge rounded-pill mb-2">Transfer</div>
+                                    <h5 class="card-title mb-3">Three New Signings Boost Squad Depth</h5>
+                                    <p class="card-text mb-0">Furious FC announces the signing of promising midfielder
+                                        Ram Bahadur Thapa and defender Sanjay Lama from local academies.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="small">
+                                            <div class="text-muted">July 25, 2025 • 4 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow" onclick="showNews(3)">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/600x350/FFD700/000000&text=Victory+Celebration"
+                                    alt="Victory" />
+                                <div class="card-body p-4">
+                                    <div class="badge rounded-pill mb-2">Match Report</div>
+                                    <h5 class="card-title mb-3">Historic 4-2 Victory in Local Derby</h5>
+                                    <p class="card-text mb-0">An unforgettable night at Balaju Ground as Furious FC
+                                        defeated rivals Kathmandu United in front of 2,000 passionate fans.</p>
+                                </div>
+                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-end justify-content-between">
+                                        <div class="small">
+                                            <div class="text-muted">July 20, 2025 • 5 min read</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team & Players Section-->
+            <section id="team" class="py-5">
+                <div class="container px-5">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bolder gold-text">
+                            <i class="bi bi-people-fill me-2"></i>
+                            Our Squad
+                        </h2>
+                        <p class="lead fw-normal text-muted mb-0">Meet the warriors of Furious FC</p>
+                    </div>
+
+                    <!-- Formation Display -->
+                    <div class="mb-5">
+                        <h3 class="text-center gold-text mb-4">Current Formation (4-3-3)</h3>
+                        <div class="formation-field mx-auto position-relative p-4" style="max-width: 600px;">
+                            <!-- Field Lines -->
+                            <div class="field-line" style="top: 50%; left: 0; right: 0; height: 0;"></div>
+                            <div class="field-line" style="left: 50%; top: 0; bottom: 0; width: 0;"></div>
+
+                            <!-- Goalkeeper -->
+                            <div class="player-dot position-absolute"
+                                style="bottom: 20px; left: 50%; transform: translateX(-50%);" data-bs-toggle="tooltip"
+                                title="Bikash Shrestha - GK">
+                                1
+                            </div>
+
+                            <!-- Defenders -->
+                            <div class="player-dot position-absolute" style="bottom: 120px; left: 15%;"
+                                data-bs-toggle="tooltip" title="Sanjay Lama - LB">2</div>
+                            <div class="player-dot position-absolute" style="bottom: 120px; left: 35%;"
+                                data-bs-toggle="tooltip" title="Dipesh Magar - CB">5</div>
+                            <div class="player-dot position-absolute" style="bottom: 120px; right: 35%;"
+                                data-bs-toggle="tooltip" title="Roshan Gurung - CB">4</div>
+                            <div class="player-dot position-absolute" style="bottom: 120px; right: 15%;"
+                                data-bs-toggle="tooltip" title="Binod Tamang - RB">3</div>
+
+                            <!-- Midfielders -->
+                            <div class="player-dot position-absolute" style="bottom: 220px; left: 25%;"
+                                data-bs-toggle="tooltip" title="Ram Bahadur Thapa - CM">6</div>
+                            <div class="player-dot position-absolute"
+                                style="bottom: 220px; left: 50%; transform: translateX(-50%);" data-bs-toggle="tooltip"
+                                title="Suraj Tamang - CAM">10</div>
+                            <div class="player-dot position-absolute" style="bottom: 220px; right: 25%;"
+                                data-bs-toggle="tooltip" title="Prakash Rai - CM">8</div>
+
+                            <!-- Forwards -->
+                            <div class="player-dot position-absolute" style="bottom: 320px; left: 20%;"
+                                data-bs-toggle="tooltip" title="Anil Gurung - LW">11</div>
+                            <div class="player-dot position-absolute"
+                                style="bottom: 320px; left: 50%; transform: translateX(-50%);" data-bs-toggle="tooltip"
+                                title="Rajesh Shrestha - ST">9</div>
+                            <div class="player-dot position-absolute" style="bottom: 320px; right: 20%;"
+                                data-bs-toggle="tooltip" title="Santosh Lama - RW">7</div>
+                        </div>
+                    </div>
+
+                    <!-- Player Cards -->
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow text-center player-card">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/300x400/FFD700/000000&text=Suraj+%2310" alt="Captain" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title mb-2">Suraj Tamang</h5>
+                                    <div class="badge rounded-pill mb-2">Captain</div>
+                                    <div class="player-position mb-2">Attacking Midfielder</div>
+                                    <p class="card-text">#10 • Age: 24</p>
+                                    <p class="card-text small">Our inspirational captain who leads by example. Clinical
+                                        passer with an eye for goal. Has scored 8 goals and provided 12 assists this
+                                        season.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow text-center player-card">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/300x400/000000/FFD700&text=Bikash+%231"
+                                    alt="Goalkeeper" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title mb-2">Bikash Shrestha</h5>
+                                    <div class="badge rounded-pill mb-2">Goalkeeper</div>
+                                    <div class="player-position mb-2">Goalkeeper</div>
+                                    <p class="card-text">#1 • Age: 26</p>
+                                    <p class="card-text small">Rock-solid between the posts with excellent shot-stopping
+                                        ability. Has kept 8 clean sheets this season and made several crucial penalty
+                                        saves.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow text-center player-card">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/300x400/FFD700/000000&text=Rajesh+%239" alt="Striker" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title mb-2">Rajesh Shrestha</h5>
+                                    <div class="badge rounded-pill mb-2">Top Scorer</div>
+                                    <div class="player-position mb-2">Striker</div>
+                                    <p class="card-text">#9 • Age: 22</p>
+                                    <p class="card-text small">Lightning-fast striker with a keen eye for goal.
+                                        Currently leads the team with 15 goals this season and has formed a deadly
+                                        partnership with wingers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow text-center player-card">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/300x400/000000/FFD700&text=Dipesh+%235"
+                                    alt="Defender" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title mb-2">Dipesh Magar</h5>
+                                    <div class="badge rounded-pill mb-2">Defender</div>
+                                    <div class="player-position mb-2">Centre Back</div>
+                                    <p class="card-text">#5 • Age: 25</p>
+                                    <p class="card-text small">Commanding center-back who reads the game exceptionally
+                                        well. Strong in the air and excellent at organizing the defense. A true leader
+                                        at the back.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow text-center player-card">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/300x400/FFD700/000000&text=Anil+%2311" alt="Winger" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title mb-2">Anil Gurung</h5>
+                                    <div class="badge rounded-pill mb-2">Winger</div>
+                                    <div class="player-position mb-2">Left Winger</div>
+                                    <p class="card-text">#11 • Age: 21</p>
+                                    <p class="card-text small">Pacey winger who loves to take on defenders. Excellent
+                                        crosser of the ball with 6 goals and 9 assists. Known for his tireless work
+                                        rate.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow text-center player-card">
+                                <img class="card-img-top"
+                                    src="https://dummyimage.com/300x400/000000/FFD700&text=Ram+%236" alt="Midfielder" />
+                                <div class="card-body p-4">
+                                    <h5 class="card-title mb-2">Ram Bahadur Thapa</h5>
+                                    <div class="badge rounded-pill mb-2">New Signing</div>
+                                    <div class="player-position mb-2">Central Midfielder</div>
+                                    <p class="card-text">#6 • Age: 23</p>
+                                    <p class="card-text small">Versatile midfielder who recently joined from youth
+                                        academy. Known for his passing range and ability to control the tempo of the
+                                        game.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fixtures & Results Section-->
+            <section id="fixtures" class="py-5 bg-light">
+                <div class="container px-5">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bolder gold-text">
+                            <i class="bi bi-calendar3 me-2"></i>
+                            Fixtures & Results
+                        </h2>
+                        <p class="lead fw-normal text-muted mb-0">Our match schedule and recent results</p>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-lg-6">
+                            <h3 class="gold-text mb-4">Upcoming Fixtures</h3>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Furious FC vs Thunder United</h5>
+                                            <p class="mb-0 text-muted">Balaju Ground, Kathmandu</p>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <div class="badge rounded-pill">Aug 10, 3:00 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Valley FC vs Furious FC</h5>
+                                            <p class="mb-0 text-muted">ANFA Complex, Lalitpur</p>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <div class="badge rounded-pill">Aug 17, 4:00 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Furious FC vs Mountain FC</h5>
+                                            <p class="mb-0 text-muted">Balaju Ground, Kathmandu</p>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <div class="badge rounded-pill">Aug 24, 2:00 PM</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 class="gold-text mb-4">Recent Results</h3>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Furious FC 4-2 Kathmandu United</h5>
+                                            <p class="mb-0 text-muted">July 20, 2025 • Local Derby</p>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <div class="badge bg-success rounded-pill">WIN</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Himalayan FC 1-3 Furious FC</h5>
+                                            <p class="mb-0 text-muted">July 15, 2025</p>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <div class="badge bg-success rounded-pill">WIN</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Furious FC 2-2 Valley United</h5>
+                                            <p class="mb-0 text-muted">July 10, 2025</p>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <div class="badge bg-warning rounded-pill">DRAW</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-8">
+                                            <h5>Thunder FC 0-2 Furious FC</h5>
+                                            <p class="mb-0 text-muted">July 5, 2025</p>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <div class="badge bg-success rounded-pill">WIN</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section-->
+            <section id="gallery" class="py-5">
+                <div class="container px-5">
+                    <div class="text-center mb-5">
+                        <h2 class="fw-bolder gold-text">
+                            <i class="bi bi-images me-2"></i>
+                            Gallery
+                        </h2>
+                        <p class="lead fw-normal text-muted mb-0">Capturing our memorable moments</p>
+                    </div>
+                    <div class="row gx-3">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <img class="img-fluid rounded-3"
+                                src="https://dummyimage.com/400x300/FFD700/000000&text=Team+Photo+2025"
+                                alt="Team Photo" />
+                            <p class="text-center mt-2 text-muted">Official Team Photo 2025</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <img class="img-fluid rounded-3"
+                                src="https://dummyimage.com/400x300/000000/FFD700&text=Derby+Victory"
+                                alt="Goal Celebration" />
+                            <p class="text-center mt-2 text-muted">Derby Victory Celebration</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <img class="img-fluid rounded-3"
+                                src="https://dummyimage.com/400x300/FFD700/000000&text=Pokhara+Training"
+                                alt="Training Session" />
+                            <p class="text-center mt-2 text-muted">Training Camp in Pokhara</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <img class="img-fluid rounded-3"
+                                src="https://dummyimage.com/400x300/000000/FFD700&text=Match+Action"
+                                alt="Match Action" />
+                            <p class="text-center mt-2 text-muted">Intense Match Action</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <img class="img-fluid rounded-3"
+                                src="https://dummyimage.com/400x300/FFD700/000000&text=New+Kit+Launch"
+                                alt="Kit Launch" />
+                            <p class="text-center mt-2 text-muted">New Kit Launch Event</p>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <img class="img-fluid rounded-3"
+                                src="https://dummyimage.com/400x300/000000/FFD700&text=Fan+Support" alt="Fan Support" />
+                            <p class="text-center mt-2 text-muted">Amazing Fan Support</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action Section-->
+            <section class="stats-section py-5">
+                <div class="container px-5">
+                    <div class="row text-center">
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="stat-number">2020</div>
+                            <p class="text-white-50">Founded</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="stat-number">22</div>
+                            <p class="text-white-50">Squad Size</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="stat-number">18</div>
+                            <p class="text-white-50">Matches Played</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4">
+                            <div class="stat-number">12</div>
+                            <p class="text-white-50">Victories</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <h3 class="fw-bold gold-text mb-3">Join the Fury!</h3>
+                        <p class="lead text-white-50 mb-4">Support your local team and be part of the Furious FC family
+                        </p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="btn btn-primary btn-lg">
+                                <i class="bi bi-heart-fill me-2"></i>
+                                Support Us
+                            </a>
+                            <a href="#" class="btn btn-outline-light btn-lg">
+                                <i class="bi bi-envelope me-2"></i>
+                                Contact
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- News Article Section (Hidden by default) -->
+        <div id="newsArticle" class="section-hidden">
+            <section class="py-5">
+                <div class="container px-5">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div id="newsContent" class="news-content">
+                                <!-- News content will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer-->
+    <footer class="py-4 mt-auto">
+        <div class="container px-5">
+            <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                <div class="col-auto">
+                    <div class="small m-0 text-white">Copyright &copy; Furious FC 2025 | Balaju, Thecho</div>
+                </div>
+                <div class="col-auto">
+                    <a class="link-light small me-3" href="#" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a class="link-light small me-3" href="#" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a class="link-light small me-3" href="#" title="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a class="link-light small" href="#" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // News articles data
+        const newsArticles = {
+            1: {
+                title: "Intense Pre-Season Training Camp Concludes Successfully",
+                date: "July 28, 2025",
+                author: "Sports Desk",
+                image: "https://dummyimage.com/800x400/FFD700/000000&text=Training+Camp",
+                content: `
+                    <p>Furious FC's pre-season training camp in the scenic hills of Pokhara has concluded with remarkable success, marking a crucial milestone in the team's preparation for the upcoming 2025-26 season. The 10-day intensive program brought together players, coaching staff, and support personnel in a focused environment designed to build both physical fitness and team chemistry.</p>
+
+                    <h3>Comprehensive Training Program</h3>
+                    <p>Under the guidance of head coach Rajan Maharjan and fitness trainer Pradip Lama, the squad underwent a rigorous daily routine that began at 6:00 AM with morning runs along Phewa Lake. The training sessions incorporated modern football methodologies, including tactical drills, set-piece practice, and high-intensity interval training.</p>
+
+                    <p>"We wanted to push the players beyond their comfort zones while building the foundation for our tactical approach this season," explained Coach Maharjan. "The natural beauty of Pokhara provided the perfect backdrop for intensive training without the usual distractions."</p>
+
+                    <h3>Focus on Team Bonding</h3>
+                    <p>Beyond the physical aspects, the camp emphasized team bonding through various activities. Evening sessions included team-building exercises, video analysis of previous matches, and strategy discussions. The players also participated in cultural activities, including visits to local temples and community centers.</p>
+
+                    <p>Captain Suraj Tamang expressed his satisfaction with the camp: "This training camp has brought us closer as a team. We've not only improved our fitness levels but also developed a better understanding of each other's playing styles. The new players have integrated well into our system."</p>
+
+                    <h3>New Tactical Approach</h3>
+                    <p>The coaching staff introduced a new 4-3-3 formation during the camp, which showed promising results in practice matches against local teams. The system emphasizes quick passing, high pressing, and fluid movement between positions.</p>
+
+                    <p>The camp also served as an opportunity to assess the fitness levels of returning players and integrate new signings Ram Bahadur Thapa and Sanjay Lama into the squad dynamics.</p>
+
+                    <h3>Looking Ahead</h3>
+                    <p>With the camp now complete, Furious FC returns to Kathmandu with renewed confidence and improved fitness levels. The team will continue training at their home ground in preparation for their upcoming match against Thunder United on August 10th.</p>
+
+                    <p>"We're excited about the season ahead," concluded goalkeeper Bikash Shrestha. "The hard work we've put in during this camp will definitely show on the pitch. We're ready to give our best for the club and our supporters."</p>
+                `
+            },
+            2: {
+                title: "Three New Signings Boost Squad Depth",
+                date: "July 25, 2025",
+                author: "Transfer News",
+                image: "https://dummyimage.com/800x400/000000/FFD700&text=New+Signings",
+                content: `
+                    <p>Furious FC has announced the successful completion of three key signings that will significantly strengthen the squad for the upcoming season. The club has secured the services of midfielder Ram Bahadur Thapa, defender Sanjay Lama, and young striker Kiran Bhandari, all of whom come with impressive credentials from local football.</p>
+
+                    <h3>Ram Bahadur Thapa - The Midfield Maestro</h3>
+                    <p>The most significant acquisition is 23-year-old central midfielder Ram Bahadur Thapa, who joins from the highly regarded Lalitpur Youth Academy. Known for his exceptional passing range and tactical intelligence, Thapa has been on Furious FC's radar for over a year.</p>
+
+                    <p>"Ram brings exactly what we were looking for in midfield," said Technical Director Pramod Shrestha. "His ability to control the tempo of the game and his vision for through balls will add a new dimension to our attacking play. He's mature beyond his years and has shown great leadership qualities even at the youth level."</p>
+
+                    <p>Thapa, who will wear jersey number 6, expressed his excitement about joining the club: "Furious FC's ambition matches my own. I want to help the team achieve great things and contribute to the wonderful football culture they've built in Balaju."</p>
+
+                    <h3>Sanjay Lama - Defensive Reinforcement</h3>
+                    <p>24-year-old defender Sanjay Lama arrives from Bhaktapur United, where he was instrumental in their defensive solidity last season. Standing at 6'2", Lama is equally comfortable playing as a center-back or left-back, providing valuable versatility to the squad.</p>
+
+                    <p>Coach Rajan Maharjan highlighted Lama's qualities: "Sanjay is a natural leader who reads the game exceptionally well. His experience in different defensive positions will give us tactical flexibility, and his aerial ability adds another threat during set pieces."</p>
+
+                    <h3>Kiran Bhandari - Future Star</h3>
+                    <p>The third signing is 19-year-old striker Kiran Bhandari, who impressed scouts during the recent regional youth tournament where he scored 8 goals in 6 matches. Despite his young age, Bhandari has already shown the clinical finishing and intelligent movement that could make him a valuable asset.</p>
+
+                    <p>"Kiran represents the future of Furious FC," explained Youth Development Coordinator Sameer Bajracharya. "While he may not be a regular starter immediately, his potential is enormous. We believe in nurturing local talent, and Kiran epitomizes the type of player we want to develop."</p>
+
+                    <h3>Squad Balance and Competition</h3>
+                    <p>These signings address key areas where the club sought to strengthen. The addition of Thapa provides creative options in midfield, while Lama adds depth to a defense that has been the team's strength. Bhandari's signing demonstrates the club's commitment to developing young talent.</p>
+
+                    <p>The new players have already begun training with the squad and are expected to feature in upcoming friendly matches. Their integration has been smooth, with senior players welcoming the new additions.</p>
+
+                    <p>With these signings complete, Furious FC now boasts a 22-man squad that perfectly balances experience and youth, providing healthy competition for places in the starting eleven.</p>
+                `
+            },
+            3: {
+                title: "Historic 4-2 Victory in Local Derby",
+                date: "July 20, 2025",
+                author: "Match Reporter",
+                image: "https://dummyimage.com/800x400/FFD700/000000&text=Derby+Victory",
+                content: `
+                    <p>In what will be remembered as one of the most thrilling matches in recent local football history, Furious FC delivered a masterclass performance to defeat arch-rivals Kathmandu United 4-2 in front of a packed Balaju Ground. The victory not only secured three crucial points but also demonstrated the team's championship credentials.</p>
+
+                    <h3>Electric Atmosphere</h3>
+                    <p>Over 2,000 passionate fans created an electrifying atmosphere that could be felt throughout the neighborhood. The Furious FC supporters, known as "The Golden Army," displayed magnificent banners and maintained non-stop chanting throughout the 90 minutes.</p>
+
+                    <p>"The support was absolutely incredible," said captain Suraj Tamang after the match. "When you have that kind of backing from the fans, you feel like you can achieve anything. They were our 12th man today."</p>
+
+                    <h3>First Half Dominance</h3>
+                    <p>Furious FC started the match with intent, taking the lead in the 15th minute through a brilliant solo effort from Rajesh Shrestha. The striker picked up the ball 25 yards from goal, beat two defenders with quick footwork, and slotted home with his left foot.</p>
+
+                    <p>The home team doubled their advantage just before the half-hour mark when Anil Gurung's perfectly weighted cross found Suraj Tamang, who headed home from close range. Kathmandu United looked shell-shocked as Furious FC continued to dominate possession and create chances.</p>
+
+                    <h3>Dramatic Second Half</h3>
+                    <p>The visitors came out fighting in the second half and pulled one back through their striker Manoj Karki in the 52nd minute. The goal seemed to energize Kathmandu United, and they equalized just eight minutes later when a defensive mix-up allowed Bishal Rai to score from six yards.</p>
+
+                    <p>For a brief moment, it seemed like the momentum had shifted completely. However, Furious FC showed their mental strength and character that has become their trademark this season.</p>
+
+                    <h3>The Winning Goals</h3>
+                    <p>The decisive moment came in the 73rd minute when substitute Santosh Lama, who had only been on the pitch for five minutes, scored a spectacular curling effort from the edge of the box. The ball flew into the top corner, leaving the Kathmandu United goalkeeper with no chance.</p>
+
+                    <p>Furious FC sealed the victory in injury time when Prakash Rai intercepted a loose pass and played through Rajesh Shrestha, who calmly slotted home his second goal of the night to complete a memorable performance.</p>
+
+                    <h3>Tactical Masterclass</h3>
+                    <p>Coach Rajan Maharjan's tactical decisions proved crucial in the victory. The switch to a more attacking formation in the second half and the introduction of fresh legs from the bench at key moments showed his growing maturity as a tactician.</p>
+
+                    <p>"We prepared extensively for this match," explained Maharjan. "We knew Kathmandu United would be dangerous, especially after their equalizer, but the players showed great composure and stuck to our game plan."</p>
+
+                    <h3>Player Performances</h3>
+                    <p>Several players delivered outstanding performances, with Rajesh Shrestha earning the man of the match award for his two goals and tireless work rate. Captain Suraj Tamang controlled the midfield with his passing and leadership, while goalkeeper Bikash Shrestha made crucial saves when called upon.</p>
+
+                    <p>The victory moves Furious FC to the top of the local league table and sends a clear message to their rivals about their title ambitions this season.</p>
+                `
+            }
+        };
+
+        // Navigation functions
+        function showHome() {
+            document.getElementById('mainSections').style.display = 'block';
+            document.getElementById('newsArticle').style.display = 'none';
+            document.getElementById('backBtn').style.display = 'none';
+
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showSection(sectionId) {
+            document.getElementById('mainSections').style.display = 'block';
+            document.getElementById('newsArticle').style.display = 'none';
+            document.getElementById('backBtn').style.display = 'none';
+
+            // Remove active class from all nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+
+            // Scroll to section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function showNews(newsId) {
+            const article = newsArticles[newsId];
+            if (!article) return;
+
+            document.getElementById('mainSections').style.display = 'none';
+            document.getElementById('newsArticle').style.display = 'block';
+            document.getElementById('backBtn').style.display = 'block';
+
+            const newsContent = document.getElementById('newsContent');
+            newsContent.innerHTML = `
+                <div class="text-center mb-5">
+                    <img src="${article.image}" alt="${article.title}" class="img-fluid rounded-3 mb-4" />
+                    <h1 class="fw-bolder gold-text mb-3">${article.title}</h1>
+                    <div class="news-date mb-2">${article.date}</div>
+                    <div class="text-muted">By ${article.author}</div>
+                </div>
+                ${article.content}
+            `;
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Back button functionality
+        document.getElementById('backBtn').addEventListener('click', showHome);
+
+        // Initialize tooltips
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+
+        // Active navigation highlighting on scroll
+        window.addEventListener('scroll', () => {
+            if (document.getElementById('mainSections').style.display !== 'none') {
+                let current = 'home';
+                const sections = document.querySelectorAll('section[id]');
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('onclick');
+                    if (href && href.includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
