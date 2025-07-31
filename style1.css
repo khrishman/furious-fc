@@ -1,0 +1,144 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #f5f5dc;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 0;
+  background: #111;
+  border-bottom: 4px solid #FFD700;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  filter: brightness(1.2);
+}
+
+header h1 {
+  margin-top: 10px;
+  font-size: 2.5em;
+  color: #FFD700;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 1.1em;
+  color: #b8860b;
+}
+
+/* News Section */
+.news-section {
+  margin: 30px 0;
+}
+
+.news-section h2 {
+  font-size: 1.8em;
+  color: #FFD700;
+  border-left: 6px solid #FFD700;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  animation: slideInLeft 1s;
+}
+
+.news-card {
+  background: #1a1a1a;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-left: 4px solid #FFD700;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 10px #b8860b22;
+}
+
+.news-card h3 {
+  color: #FFD700;
+}
+
+.news-card:hover {
+  transform: scale(1.03);
+  background: #222;
+}
+
+/* Match Highlight */
+.match-highlight {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  animation: slideInRight 1s;
+  box-shadow: 0 0 15px #b8860b33;
+}
+
+.match-highlight h2 {
+  color: #FFD700;
+  margin-bottom: 15px;
+}
+
+.match-card {
+  padding: 15px;
+  background: #121212;
+  border-left: 4px solid #FFD700;
+  transition: background 0.3s;
+}
+
+.match-card p {
+  margin: 5px 0;
+}
+
+.match-card:hover {
+  background: #1c1c1c;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: #111;
+  color: #b8860b;
+  font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .news-card, .match-card {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
